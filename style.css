@@ -102,15 +102,25 @@ body.login-body {
     min-height: 100vh;
 }
 .discord-login-body {
-    background: linear-gradient(135deg, #007A3D, #000000);
+    background: linear-gradient(135deg, #000000, #1a1a1a);
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
     margin: 0;
+    animation: gradientShift 15s ease infinite;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 .discord-login-body::before {
@@ -140,7 +150,7 @@ body.login-body {
 .discord-login-container {
     width: 100%;
     max-width: 480px;
-    padding: 20px;
+    box-sizing: border-box;
 }
 
 .discord-login-box {
