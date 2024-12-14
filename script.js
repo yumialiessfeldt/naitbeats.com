@@ -85,19 +85,26 @@ function deleteFundraiser(index) {
 }
 
 if (fundraiserForm) {
-    fundraiserForm.addEventListener('submit', (e) => {
+    fundraiserForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const fundraisers = JSON.parse(localStorage.getItem('fundraisers') || '[]');
-        fundraisers.push({
+        const newFundraiser = {
             title: document.getElementById('title').value,
             description: document.getElementById('description').value,
             link: document.getElementById('link').value,
             raised: parseFloat(document.getElementById('raised').value),
             goal: parseFloat(document.getElementById('goal').value)
-        });
+        };
+        fundraisers.push(newFundraiser);
         localStorage.setItem('fundraisers', JSON.stringify(fundraisers));
         fundraiserForm.reset();
         loadFundraisers();
+        
+        // Force immediate update of both admin and campaign pages
+        updateCampaignsPage(fundraisers);
+        if (fundraiserList) {
+            loadFundraisers();
+        }
     });
 }
 
@@ -146,4 +153,3 @@ if (logoutButton) {
         window.location.href = 'login.html';
     });
 }
-
