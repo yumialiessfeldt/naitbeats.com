@@ -122,7 +122,11 @@ document.addEventListener('DOMContentLoaded', () => {
         addShimmerEffect(fundraiserGrid);
     }
 
+    // Initial load
     loadFundraisers();
+    
+    // Refresh campaigns every 2 seconds
+    setInterval(loadFundraisers, 2000);
 
     // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -142,3 +146,4 @@ if (logoutButton) {
         window.location.href = 'login.html';
     });
 }
+
