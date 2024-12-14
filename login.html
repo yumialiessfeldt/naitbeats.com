@@ -8,26 +8,31 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
-<body class="login-body">
-    <div class="modern-login-container">
-        <div class="login-content">
-            <header class="login-header">
-                <h2>Admin Login</h2>
-                <p>Enter your credentials</p>
-            </header>
-            <form id="login-form">
-                <div class="form-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" placeholder="Enter username" required>
-                </div>
-                <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter password" required>
-                </div>
-                <div id="error-message" class="error"></div>
-                <button type="submit" class="login-button">Sign In</button>
-            </form>
-            <a href="index.html" class="login-back-button">← Back to Home</a>
+<body class="discord-login-body">
+    <div class="discord-login-container">
+        <div class="discord-login-box">
+            <div class="discord-login-content">
+                <h2>Welcome back!</h2>
+                <p class="login-subtitle">We're excited to see you again!</p>
+                
+                <form id="login-form" class="discord-form">
+                    <div class="discord-form-group">
+                        <label for="username">USERNAME</label>
+                        <input type="text" id="username" required>
+                    </div>
+                    
+                    <div class="discord-form-group">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" required>
+                    </div>
+                    
+                    <div id="error-message" class="discord-error"></div>
+                    
+                    <button type="submit" class="discord-login-button">Log In</button>
+                </form>
+                
+                <a href="index.html" class="discord-back-link">← Back to Home</a>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
