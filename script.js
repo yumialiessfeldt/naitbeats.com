@@ -153,4 +153,3 @@ if (logoutButton) {
         window.location.href = 'login.html';
     });
 }
-
