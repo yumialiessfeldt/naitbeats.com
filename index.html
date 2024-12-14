@@ -70,8 +70,10 @@
 .socials-container {
     display: flex;
     justify-content: center;
-    padding: 1rem 0;
-    margin: -1rem 0 1rem 0;
+    padding: 10px;
+    margin: 0 auto 1rem auto;
+    max-width: 900px;
+    background: transparent;
 }
 .socials-wrapper {
     display: flex;
@@ -102,7 +104,7 @@
         /* Logo */
         .logo {
             display: block;
-            margin: 20px auto;
+            margin: 10px auto;
             border-radius: 20px;
             width: 100%;
             max-width: 1350px;
@@ -121,11 +123,12 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 20px;
-            margin-top: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding: 25px;
+            margin: 15px auto;
+            max-width: 900px;
+            border-radius: 15px;
             background: linear-gradient(to bottom, #000000, #1f1f1f);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         .content-section h2 {
             color: #e0e0e0;
@@ -138,19 +141,57 @@
             color: #e0e0e0;
             margin-bottom: 10px;
         }
-        .content-section p {
-            line-height: 1.6;
-            margin-bottom: 20px;
-            text-align: justify;
+        .content-section p, .content-section h2, .content-section h3 {
+            line-height: 1.8;
+            margin-bottom: 30px;
             text-align: center;
-            width: 80%;
+            width: 100%;
+            padding: 0 20px;
+            font-size: 1.1rem;
+            animation: fadeInContent 1s ease-out forwards;
+        }
+
+        @keyframes fadeInContent {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .content-section h2, .content-section h3 {
+            font-size: 1.5rem;
+        }
+
+        @keyframes slideInFade {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .content-section p {
+                width: 100%;
+                padding: 0 10px;
+                font-size: 0.9rem;
+            }
         }
         /* Palestine Campaign Button */
         .palestine-campaign {
             display: flex;
             justify-content: center;
-            margin: 2rem 0;
+            margin: 1rem auto;
+            max-width: 900px;
             animation: float 3s ease-in-out infinite;
+            padding: 15px;
         }
         .palestine-campaign a {
             background: linear-gradient(45deg, #007A3D, #009736);
@@ -177,10 +218,11 @@
         .icon-buttons {
             display: flex;
             justify-content: center;
-            gap: 2rem;
-            margin: 2rem 0;
+            gap: 2.5rem;
+            margin: 2rem auto;
             flex-wrap: wrap;
             padding: 0 1rem;
+            max-width: 900px;
         }
         .icon-buttons a {
             display: flex;
@@ -226,9 +268,9 @@
         footer {
             background: #1f1f1f;
             text-align: center;
-            padding: 15px;
+            padding: 12px;
             border-top: 1px solid #333;
-            margin-top: 20px;
+            margin-top: 2rem;
         }
         /* Responsive Design (Optional) */
      
@@ -241,6 +283,12 @@
         <img src="https://i.imgur.com/XscVZDz.jpeg" alt="NaitBeats Logo" class="logo">
         </section>
     </header>
+    <div class="palestine-campaign">
+        <a href="campaigns.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/2942/2942076.png" alt="Palestine">
+            <span>Support Palestine - Donate Now</span>
+        </a>
+    </div>
     <div class="socials-container">
         <div class="socials-wrapper">
             <a href="https://instagram.com/naitbeatss" target="_blank">
@@ -258,22 +306,30 @@
         </div>
     </div>
     <main>
-        <div class="palestine-campaign">
-            <a href="campaigns.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/2942/2942076.png" alt="Palestine">
-                <span>Support Palestine - Donate Now</span>
-            </a>
-        </div>
         <section class="content-section">
             <h2>NaitBeats</h2>
-            <p>Hi, I'm NaitBeats, a 24-year-old coder who thrives on creativity and problem-solving. <br>
-                I enjoy diving into the world of code, creating solutions, and exploring the endless possibilities of technology.<br>
-                When I'm not coding, I appreciate finding inspiration in everyday moments.</p>
+            <p class="main-text">Hi, I'm NaitBeats, a passionate 24-year-old coder with a deep love for creative problem-solving 
+                and innovative development. My journey in programming has been driven by curiosity and the desire to create 
+                meaningful solutions. Through each project, I strive to push boundaries and explore new possibilities in technology.</p>
+            
+            <p class="main-text">With a strong foundation in web development and a keen eye for detail, I transform complex 
+                challenges into elegant solutions. My approach combines technical expertise with creative thinking, ensuring 
+                each project not only functions flawlessly but also delivers an exceptional user experience.</p>
+            
             <h3>Professional Yet Approachable</h3>
-            <p>I believe in staying professional while maintaining a positive and relaxed outlook.<br>
-                My work reflects this balance, aiming for excellence with a touch of creativity.</p>
+            <p class="main-text">In my work, I maintain a perfect balance between professionalism and approachability. 
+                This dual approach allows me to deliver high-quality results while fostering positive collaborations. 
+                I believe that the best solutions emerge from combining technical excellence with creative innovation.</p>
+            
+            <p class="main-text">Every project I undertake reflects this philosophy, where attention to detail meets 
+                creative problem-solving. It's about creating solutions that not only meet technical requirements but 
+                also exceed expectations in terms of user experience and functionality.</p>
+            
             <h3>Explore</h3>
-            <p>Use the icons below to learn more about me, connect via email, or play a not so fun Minesweeper game!</p>
+            <p class="main-text">I invite you to explore more about my work and experiences through the interactive 
+                sections below. Whether you're interested in learning more about my journey, connecting for potential 
+                collaborations, or even testing your skills with a challenging game of Minesweeper, there's something 
+                here for everyone.</p>
         </section>
         <div class="icon-buttons">
             <a href="about.html" style="--i:1">
@@ -287,10 +343,6 @@
             <a href="minigame.html">
                 <img src="https://cdn-icons-png.flaticon.com/512/103/103086.png" alt="Controller">
                 <small>Game</small>
-            </a>
-            <a href="campaigns.html">
-                <img src="https://cdn-icons-png.flaticon.com/512/2942/2942076.png" alt="Campaigns">
-                <small>Palestine</small>
             </a>
             <a href="login.html">
                 <img src="https://cdn-icons-png.flaticon.com/512/1000/1000946.png" alt="Admin">

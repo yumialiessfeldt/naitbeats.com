@@ -1,4 +1,13 @@
 
+// Initialize page animations
+document.addEventListener('DOMContentLoaded', () => {
+    const elements = document.querySelectorAll('.content-section p, .content-section h2, .content-section h3');
+    elements.forEach((element, index) => {
+        element.style.animationDelay = `${index * 0.2}s`;
+    });
+});
+
+
 // Login Form Handler
 const loginForm = document.getElementById('login-form');
 if (loginForm) {
