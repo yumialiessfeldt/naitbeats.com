@@ -1,0 +1,1 @@
+User requested restoration of social icons and the creation of an admin page for managing messages from the contact form.

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NaitBeats</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+        
+        body {
+            background: linear-gradient(135deg, #000000, #1a1a1a);
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            animation: gradientShift 15s ease infinite;
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .content-section, .socials-wrapper, .icon-buttons a {
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        /* Navigation */
+      nav {
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 10px 10px;
+    position: relative;
+    margin-top: 20px;
+    box-shadow: 0 0 0px 0px rgba(255, 255, 255, 0.7);
+}
+        nav strong {
+            color: #e0e0e0;
+            font-size: 1.5rem;
+        }
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            justify-content: center; /* Center the social icons */
+        }
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            font-size: 1.2rem;
+            color: #e0e0e0;
+        }
+        .social-icons a img {
+            width: 36px;
+            height: 36px;
+            margin-right: 8px;
+        }
+        /*Social Wrapper*/
+.socials-container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    margin: -1rem 0 1rem 0;
+}
+.socials-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(31, 31, 31, 0.6);
+    padding: 1.5rem;
+    border-radius: 20px;
+    width: fit-content;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+    .socials-wrapper a {
+      text-decoration: none;
+      color: white;
+      margin: 0 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .socials-wrapper a img {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px;
+    }
+        /* Logo */
+        .logo {
+            display: block;
+            margin: 20px auto;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 1350px;
+            height: auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            filter: brightness(1.1) contrast(1.1);
+        }
+        .logo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+        }
+        /* Content Section */
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background: linear-gradient(to bottom, #000000, #1f1f1f);
+        }
+        .content-section h2 {
+            color: #e0e0e0;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            width: 80%;
+        }
+        .content-section h3 {
+            color: #e0e0e0;
+            margin-bottom: 10px;
+        }
+        .content-section p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            text-align: justify;
+            text-align: center;
+            width: 80%;
+        }
+        /* Palestine Campaign Button */
+        .palestine-campaign {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            animation: float 3s ease-in-out infinite;
+        }
+        .palestine-campaign a {
+            background: linear-gradient(45deg, #007A3D, #009736);
+            padding: 1rem 2rem;
+            border-radius: 15px;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 151, 54, 0.3);
+        }
+        .palestine-campaign a:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 151, 54, 0.4);
+        }
+        .palestine-campaign img {
+            width: 32px;
+            height: 32px;
+            filter: brightness(0) invert(1);
+        }
+        /* Icon Buttons */
+        .icon-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            padding: 0 1rem;
+        }
+        .icon-buttons a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            background: rgba(31, 31, 31, 0.9);
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            color: #ffffff;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            animation: fadeIn 0.5s ease-out backwards;
+        }
+        .icon-buttons a:nth-child(1) { animation-delay: 0.1s; }
+        .icon-buttons a:nth-child(2) { animation-delay: 0.2s; }
+        .icon-buttons a:nth-child(3) { animation-delay: 0.3s; }
+        .icon-buttons a:nth-child(4) { animation-delay: 0.4s; }
+        .icon-buttons a:nth-child(5) { animation-delay: 0.5s; }
+        .icon-buttons a img {
+            width: 32px;
+            height: 32px;
+            transition: transform 0.3s ease;
+        }
+        .icon-buttons a:hover {
+            transform: translateY(-5px) scale(1.05);
+            background: rgba(31, 31, 31, 0.95);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        }
+        .icon-buttons a:hover img {
+            transform: scale(1.2);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        /* Footer */
+        footer {
+            background: #1f1f1f;
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid #333;
+            margin-top: 20px;
+        }
+        /* Responsive Design (Optional) */
+     
+            
+    
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://i.imgur.com/XscVZDz.jpeg" alt="NaitBeats Logo" class="logo">
+        </section>
+    </header>
+    <div class="socials-container">
+        <div class="socials-wrapper">
+            <a href="https://instagram.com/naitbeatss" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                Instagram
+            </a>
+            <a href="https://discord.com/users/reisalinstout" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">
+                reisalinstout
+            </a>
+            <a href="https://x.com/naitbeats" target="_blank">
+                <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="X">
+                Twitter
+            </a>
+        </div>
+    </div>
+    <main>
+        <div class="palestine-campaign">
+            <a href="campaigns.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/2942/2942076.png" alt="Palestine">
+                <span>Support Palestine - Donate Now</span>
+            </a>
+        </div>
+        <section class="content-section">
+            <h2>NaitBeats</h2>
+            <p>Hi, I'm NaitBeats, a 24-year-old coder who thrives on creativity and problem-solving. <br>
+                I enjoy diving into the world of code, creating solutions, and exploring the endless possibilities of technology.<br>
+                When I'm not coding, I appreciate finding inspiration in everyday moments.</p>
+            <h3>Professional Yet Approachable</h3>
+            <p>I believe in staying professional while maintaining a positive and relaxed outlook.<br>
+                My work reflects this balance, aiming for excellence with a touch of creativity.</p>
+            <h3>Explore</h3>
+            <p>Use the icons below to learn more about me, connect via email, or play a not so fun Minesweeper game!</p>
+        </section>
+        <div class="icon-buttons">
+            <a href="about.html" style="--i:1">
+                <img src="https://cdn-icons-png.flaticon.com/512/876/876069.png" alt="About">
+                <small>About</small>
+            </a>
+            <a href="contact.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/725/725643.png" alt="Mail">
+                <small>Contact</small>
+            </a>
+            <a href="minigame.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/103/103086.png" alt="Controller">
+                <small>Game</small>
+            </a>
+            <a href="campaigns.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/2942/2942076.png" alt="Campaigns">
+                <small>Palestine</small>
+            </a>
+            <a href="login.html">
+                <img src="https://cdn-icons-png.flaticon.com/512/1000/1000946.png" alt="Admin">
+                <small>Admin</small>
+            </a>
+        </div>
+    </main>
+    <footer>
+        <small>© 2024 NaitBeats</small>
+    </footer>
+</body>
+</html>

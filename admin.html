@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - NaitBeats</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="admin-body">
+    <div class="admin-dashboard">
+        <header class="admin-header">
+            <h1>Campaign Management</h1>
+            <p>Add and manage fundraising campaigns</p>
+        </header>
+        <main class="admin-main">
+            <section class="admin-form-section">
+                <h2>Add New Campaign</h2>
+                <form id="fundraiser-form" class="admin-form">
+                    <div class="form-group">
+                        <label for="title">Campaign Title</label>
+                        <input type="text" id="title" placeholder="Enter campaign title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" placeholder="Enter campaign description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="link">GoFundMe Link</label>
+                        <input type="url" id="link" placeholder="https://..." required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group half">
+                            <label for="raised">Amount Raised ($)</label>
+                            <input type="number" id="raised" placeholder="0" required>
+                        </div>
+                        <div class="form-group half">
+                            <label for="goal">Goal Amount ($)</label>
+                            <input type="number" id="goal" placeholder="1000" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="admin-submit-btn">Add Campaign</button>
+                </form>
+            </section>
+            
+            <section class="admin-list-section">
+                <h2>Active Campaigns</h2>
+                <div id="fundraiser-list" class="fundraiser-list">
+                    <!-- Fundraisers will be listed here -->
+                </div>
+            </section>
+        </main>
+        <footer class="admin-footer">
+            <button id="logout-button" class="admin-logout-btn">Logout</button>
+            <a href="index.html" class="admin-back-link">← Back to Home</a>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

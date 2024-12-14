@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About Me - NaitBeats</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: rgba(17, 17, 17, 0.7);
+            border-radius: 24px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .profile-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 12px;
+            margin: 0 auto 1.5rem;
+            border: 2px solid #009736;
+            padding: 3px;
+            background: #111;
+            transition: transform 0.3s ease;
+            object-fit: cover;
+        }
+
+        .profile-image:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 151, 54, 0.2);
+        }
+
+        .section-title {
+            color: #009736;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 2rem;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0, 151, 54, 0.1);
+        }
+
+        .about-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 151, 54, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-card h3 {
+            color: #009736;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .about-card p {
+            color: #e0e0e0;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill-tag {
+            background: rgba(76, 175, 80, 0.1);
+            color: #4CAF50;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: rgba(76, 175, 80, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .back-button {
+            position: absolute;
+            left: 2rem;
+            top: 2rem;
+            color: #fff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-button:hover {
+            transform: translateX(-5px);
+        }
+
+        @media (max-width: 768px) {
+            .about-container {
+                margin: 1rem;
+                padding: 1.5rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .back-button {
+                position: static;
+                margin-bottom: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="about-container">
+        <a href="index.html" class="back-button">← Back</a>
+        
+        <div class="profile-header">
+            <img src="https://i.imgur.com/XscVZDz.jpeg" alt="Profile" class="profile-image">
+            <h1 class="section-title">About Me</h1>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>Who I Am</h3>
+                <p>A dedicated software developer with a focus on web technologies. I bring creative solutions to complex problems, combining technical expertise with innovative thinking.</p>
+                <div class="skills-container">
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Creative Thinking</span>
+                    <span class="skill-tag">Innovation</span>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <h3>What I Do</h3>
+                <p>I specialize in creating responsive and user-centric applications that meet both client needs and industry standards, with experience in full-stack development.</p>
+                <div class="skills-container">
+                    <span class="skill-tag">Web Development</span>
+                    <span class="skill-tag">Full Stack</span>
+                    <span class="skill-tag">UI/UX</span>
+                </div>
+            </div>
+
+            <div class="about-card">
+                <h3>My Approach</h3>
+                <p>I believe in staying professional while maintaining a positive and relaxed outlook. My work reflects this balance, aiming for excellence with a touch of creativity.</p>
+                <div class="skills-container">
+                    <span class="skill-tag">Team Work</span>
+                    <span class="skill-tag">Communication</span>
+                    <span class="skill-tag">Leadership</span>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
